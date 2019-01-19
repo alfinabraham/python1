@@ -1,0 +1,18 @@
+{% extends 'master.html' %}
+{% block firstpage %}
+
+<h1>List of Faculties</h1>
+{% for i in facultyLt%}
+<div class="card" style="width: 18rem;">
+        <div class="card-header">
+              {{i.name}}
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{i.dept}}</li>
+          <li class="list-group-item">{{i.mob}}</li>
+          <li class="list-group-item">{{i.email}}</li>
+        </ul>
+      </div>
+      <br>
+{% endfor %}
+{% endblock %}
